@@ -10,18 +10,10 @@ const binarySearch = (array, target) => {
 		} else {
 			return false
 		}
-	} else if (array.length === 2) {
-		if (array[0] === target) {
-			return true
-		} else if (array[1] === target) {
-			return true
-		} else {
-			return false
-		}
 	} else {
 		const mid = Math.floor(array.length / 2);
 
-		if (array[mid] < target) {
+		if (array[mid] > target) {
 			return binarySearch(array.slice(0, mid), target)
 		} else if (array[mid] === target) {
 			return true
